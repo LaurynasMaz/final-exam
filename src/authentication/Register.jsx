@@ -9,6 +9,7 @@ const Register = () => {
 
    const [formInputs] = useState({
       username: '',
+      email:'',
       password: '',
       passwordRepeat: '',
       avatar: ''
@@ -17,6 +18,9 @@ const Register = () => {
       username: Yup.string()
          .min(4, 'username must be at least 4 symbols')
          .required('This field must be filled.'),
+      email: Yup.string()
+         .email('Must be proper Email')
+         .required('This field must be filled.'),   
       password: Yup.string()
          .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$-/:-?{-~!"^_`[\]])(?=.{8,})/,
          'Password must contain 8 letters, atleast one capitalize letter, number, simbol')
@@ -70,6 +74,19 @@ const Register = () => {
                            {
                               errors.username && touched.username ? 
                                  <span>{errors.username}</span>
+                                 : null
+                           }
+                        </label>
+                     </div>
+                     <div>
+                        <label>
+                           Email:
+                           <Field type="email" name="email" value={values.email}
+                              onChange={(e) => setValues({...values, email:e.target.value})}
+                           />
+                           {
+                              errors.email && touched.email ? 
+                                 <span>{errors.email}</span>
                                  : null
                            }
                         </label>
