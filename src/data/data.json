@@ -1,10 +1,17 @@
 {
-   "users": [
-     {
-       "id": 0,
-       "username": "laurynas",
-       "password": "laurynas",
-       "avatar": "https://cdn.pixabay.com/photo/2020/07/14/13/07/icon-5404125_1280.png"
-     }
-   ] 
+  "users": [
+    {
+      "id": 0,
+      "username": "laurynas",
+      "password": "laurynas",
+      "avatar": "https://cdn.pixabay.com/photo/2020/07/14/13/07/icon-5404125_1280.png"
+    },
+    {
+      "username": "Test!12345",
+      "password": "Test!12345",
+      "passwordRepeat": "Test!12345",
+      "avatar": "https://images.secretlab.co/theme/common/collab_pokemon_catalog_charizard-min.png",
+      "id": 1675684712279
+    }
+  ]
 }
