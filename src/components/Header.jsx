@@ -16,6 +16,7 @@ const Header = () => {
                <>
                <UserInfo /> 
                <Link to='/'>Home</Link>
+               <Link to='newPost'>New Post</Link>
                </>
             :
                <div className="loginRegister">

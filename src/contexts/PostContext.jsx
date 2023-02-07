@@ -12,11 +12,21 @@ const PostProvider = ({ children }) => {
          .then(data => setPosts(data))
          .catch(error => console.log(error));
    }, []);
+   const addNewPost = async (newPost) => {
+      const response = await fetch('http://localhost:5000/posts', {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify(newPost),
+      });
+      const data = await response.json();
+      setPosts([...posts, data]);
+   };
 
    return (
       <PostContext.Provider
          value={{
             posts,
+            addNewPost
          }}
       >
          {children}

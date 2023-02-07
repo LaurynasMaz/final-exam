@@ -27,12 +27,25 @@
       "avatar": "https://images.secretlab.co/theme/common/collab_pokemon_catalog_charizard-min.png"
     }
   ],
-  "posts":[
+  "posts": [
     {
       "id": 1,
       "userId": 0,
       "title": "klausimas",
       "question": "swx ka tu ?"
+    },
+    {
+      "id": 1675756668633,
+      "userId": 0,
+      "title": "labas",
+      "question": "noriu uzduoti klausima?"
+    },
+    {
+      "id": 1675760808451,
+      "userId": 0,
+      "title": "dasdas",
+      "question": "asdsa",
+      "timeStamp": "2023-02-07 11:06:48"
     }
   ]
 }

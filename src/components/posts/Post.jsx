@@ -23,6 +23,7 @@ const Post = ({data}) => {
 
                />
                <span>{postOwner.username}</span>
+               <small>{data.timeStamp}</small>
             </>
          )}
          <h1>{data.title}</h1>
