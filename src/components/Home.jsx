@@ -1,6 +1,10 @@
+import Posts from "./posts/Posts";
+
 const Home = () => {
    return ( 
-      <></>
+      <>
+      <Posts />
+      </>
     );
 }
  

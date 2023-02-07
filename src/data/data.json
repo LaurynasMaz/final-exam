@@ -26,5 +26,13 @@
       "password": "Laurynas15!@ggmail.com",
       "avatar": "https://images.secretlab.co/theme/common/collab_pokemon_catalog_charizard-min.png"
     }
+  ],
+  "posts":[
+    {
+      "id": 1,
+      "userId": 0,
+      "title": "klausimas",
+      "question": "swx ka tu ?"
+    }
   ]
 }
