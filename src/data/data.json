@@ -9,7 +9,6 @@
     {
       "username": "Test!12345",
       "password": "Test!12345",
-      "passwordRepeat": "Test!12345",
       "avatar": "https://images.secretlab.co/theme/common/collab_pokemon_catalog_charizard-min.png",
       "id": 1675684712279
     },
@@ -17,9 +16,15 @@
       "username": "Laurynas15!@gmail.com",
       "email": "Laurynas15!@gmail.com",
       "password": "Laurynas15!@gmail.com",
-      "passwordRepeat": "Laurynas15!@gmail.com",
       "avatar": "https://images.secretlab.co/theme/common/collab_pokemon_catalog_charizard-min.png",
       "id": 1675688816356
+    },
+    {
+      "id": 1675751237628,
+      "username": "Laurynas15!@ggmail.com",
+      "email": "Laurynas15!@ggmail.com",
+      "password": "Laurynas15!@ggmail.com",
+      "avatar": "https://images.secretlab.co/theme/common/collab_pokemon_catalog_charizard-min.png"
     }
   ]
 }

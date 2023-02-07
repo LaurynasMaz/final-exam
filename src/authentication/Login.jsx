@@ -17,7 +17,6 @@ const Login = () => {
       e.preventDefault();
 
       const loggedInUser = users.find(user => user.username === formInputs.username && user.password === formInputs.password);
-      console.log(loggedInUser)
 
       if (!loggedInUser) {
          setFailedLogIn(true);

@@ -14,8 +14,6 @@ const UserInfo = () => {
       navigation('/');
    }
    
-   console.log(loggedInUser.userName);
-   
    return (
          <div className="userText">
             <span>

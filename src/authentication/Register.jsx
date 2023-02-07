@@ -35,13 +35,19 @@ const Register = () => {
    const { users, addNewUser, setLoggedInUser } = useContext(UserContext);
    const navigation = useNavigate();
 
+
    const handleSubmit = (values) => {
+      const {username, email, password , avatar} = values
+
       if(users.find(user => user.username === values.username)){
          setInvalidUsername(true);
       } else {
          let newUser = {
-            ...values,
-            id: Date.now()
+            id: Date.now(),
+            username,
+            email,
+            password,
+            avatar
          };
          addNewUser(newUser);
          setLoggedInUser(newUser);
