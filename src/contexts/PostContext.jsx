@@ -21,12 +21,31 @@ const PostProvider = ({ children }) => {
       const data = await response.json();
       setPosts([...posts, data]);
    };
+   const updatePost = async (id, updatedPost) => {
+
+      let postObject =  getCurrentPostObject(id);
+      postObject = {...postObject, ...updatedPost};
+
+      await fetch(`http://localhost:5000/posts/${id}`, {
+         method: 'PUT',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify(postObject)
+      });
+
+      setPosts(posts.map(post => post.id.toString() === postObject.id.toString() ? postObject : post));
+   };
+
+   const getCurrentPostObject = (id) => {
+      return posts.find(post => post.id.toString() === id.toString());
+   }
 
    return (
       <PostContext.Provider
          value={{
             posts,
-            addNewPost
+            addNewPost,
+            updatePost
+            
          }}
       >
          {children}
