@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 const Post = ({data}) => {
 
    const { users, loggedInUser } = useContext(UserContext);
-   const { posts } = useContext(PostContext)
+   const { deletePost } = useContext(PostContext)
 
    const postOwner = users.find(user => user.id === data.userId);
 
@@ -38,6 +38,7 @@ const Post = ({data}) => {
          loggedInUser && loggedInUser.id === postOwner.id &&
             <>
                <button><Link to={`/editPost/${data.id}`}>Edit</Link></button>
+               <button onClick={() => deletePost(data.id)}>Delete</button>
             </>
          }
          <hr />

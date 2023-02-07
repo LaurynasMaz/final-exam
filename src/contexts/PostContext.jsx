@@ -38,14 +38,20 @@ const PostProvider = ({ children }) => {
    const getCurrentPostObject = (id) => {
       return posts.find(post => post.id.toString() === id.toString());
    }
+   const deletePost = async (id) => {
+      await fetch(`http://localhost:5000/posts/${id}`, {
+         method: 'DELETE',
+      });
+      setPosts(posts.filter(post => post.id !== id));
+   };
 
    return (
       <PostContext.Provider
          value={{
             posts,
             addNewPost,
-            updatePost
-            
+            updatePost,
+            deletePost
          }}
       >
          {children}
