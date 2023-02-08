@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import NewPost from './components/posts/NewPost';
 import EditPost from './components/posts/EditPost';
+import ShowPost from './components/comments/ShowPost';
 
 const App = () => {
    return (
@@ -17,7 +18,8 @@ const App = () => {
                <Route path="/login" element={<Login />}/>
                <Route path='/' element={<Home />}/>
                <Route path='/newPost' element={<NewPost />}/>
-               <Route path="/editPost/:id" element={<EditPost />}/>
+               <Route path='/editPost/:id' element={<EditPost />}/>
+               <Route path='/showPost/:id' element={<ShowPost />}/>
             </Route>
          </Routes>
       </div>

@@ -1,7 +1,7 @@
 import UserContext from "../../contexts/UserContext";
 import PostContext from "../../contexts/PostContext";
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 
 
@@ -9,9 +9,15 @@ const Post = ({data}) => {
 
    const { users, loggedInUser } = useContext(UserContext);
    const { deletePost } = useContext(PostContext)
+   const navigator = useNavigate()
 
    const postOwner = users.find(user => user.id === data.userId);
 
+
+
+   const showPost  = () =>{
+      navigator(`showPost/${data.id}`)
+   }
    
    return (
       <div className="postCard">
@@ -32,8 +38,12 @@ const Post = ({data}) => {
                )}
             </>
          )}
-         <h1>{data.title}</h1>
-         <p>{data.question}</p>
+         
+         <div className="content" onClick={showPost}>
+            <h1>{data.title}</h1>
+            <p>{data.question}</p>
+         </div>
+
          {
          loggedInUser && loggedInUser.id === postOwner.id &&
             <>

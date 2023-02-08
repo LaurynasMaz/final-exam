@@ -29,11 +29,57 @@
   ],
   "posts": [
     {
-      "id": 1,
+      "id": 1675772380731,
+      "userId": 1675751237628,
+      "title": "dfgdfgfdgddsfds",
+      "question": "fgfdgfdddfghdd",
+      "timeStamp": "2023-02-07 14:19:40",
+      "lastEditTimestamp": "2023-02-07 15:26:41",
+      "answers": [
+
+      ]
+    },
+    {
+      "id": 1675776448952,
+      "userId": 1675751237628,
+      "title": "sdfsdfsdfsdsdfsd",
+      "question": "fsdfsdfdsfsd",
+      "timeStamp": "2023-02-07 15:27:28",
+      "lastEditTimestamp": "2023-02-07 15:27:35",
+      "answers": [
+
+      ]
+    },
+    {
+      "id": 1675776474191,
       "userId": 0,
-      "title": "klausimas",
-      "question": "swx ka tu ?",
-      "lastEditTimestamp": "2023-02-07 13:32:23"
+      "title": "dsfsdfdsfsdfsd",
+      "question": "sfdsdfsd",
+      "timeStamp": "2023-02-07 15:27:54",
+      "lastEditTimestamp": "2023-02-07 15:28:00",
+      "answers": [
+
+      ]
+    },
+    {
+      "id": 1675777651640,
+      "userId": 0,
+      "title": "fggfdgfd",
+      "question": "dgfdfgfd",
+      "timeStamp": "2023-02-07 15:47:31",
+      "answers": [
+
+      ]
+    },
+    {
+      "id": 1675777865891,
+      "userId": 0,
+      "title": "dsfsdf",
+      "question": "sdfsdds",
+      "timeStamp": "2023-02-07 15:51:05",
+      "answers": [
+        
+      ]
     }
   ]
 }
