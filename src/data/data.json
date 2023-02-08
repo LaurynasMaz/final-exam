@@ -36,7 +36,18 @@
       "timeStamp": "2023-02-07 14:19:40",
       "lastEditTimestamp": "2023-02-07 15:26:41",
       "answers": [
-
+        {
+          "questionId": 1675772380731,
+          "userId": 1675751237628,
+          "answerId":1,
+          "comment": "geras atsakymas"
+        },
+        {
+          "questionId": 1675772380731,
+          "userId": 1675751237628,
+          "answerId":2,
+          "comment": "geras atfsfsakymas"
+        }
       ]
     },
     {
@@ -47,38 +58,12 @@
       "timeStamp": "2023-02-07 15:27:28",
       "lastEditTimestamp": "2023-02-07 15:27:35",
       "answers": [
-
-      ]
-    },
-    {
-      "id": 1675776474191,
-      "userId": 0,
-      "title": "dsfsdfdsfsdfsd",
-      "question": "sfdsdfsd",
-      "timeStamp": "2023-02-07 15:27:54",
-      "lastEditTimestamp": "2023-02-07 15:28:00",
-      "answers": [
-
-      ]
-    },
-    {
-      "id": 1675777651640,
-      "userId": 0,
-      "title": "fggfdgfd",
-      "question": "dgfdfgfd",
-      "timeStamp": "2023-02-07 15:47:31",
-      "answers": [
-
-      ]
-    },
-    {
-      "id": 1675777865891,
-      "userId": 0,
-      "title": "dsfsdf",
-      "question": "sdfsdds",
-      "timeStamp": "2023-02-07 15:51:05",
-      "answers": [
-        
+        {
+          "questionId": 1675776448952,
+          "userId": 1675751237628,
+          "answerId":2,
+          "comment": "geras atsakymas"
+        }
       ]
     }
   ]

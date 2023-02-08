@@ -6,7 +6,7 @@ import Header from './components/Header';
 import Home from './components/Home';
 import NewPost from './components/posts/NewPost';
 import EditPost from './components/posts/EditPost';
-import ShowPost from './components/comments/ShowPost';
+import ShowPost from './components/Answers/ShowPost';
 
 const App = () => {
    return (
