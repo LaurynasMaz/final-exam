@@ -1,33 +1,31 @@
-import React, { createContext, useState, useEffect, useContext } from "react";
-import PostContext from "./PostContext";
+import React, { createContext, useState, useEffect } from "react";
 
 const AnswerContext = createContext();
 
 const AnswerProvider = ({ children  }) => {
 
-   const { posts } = useContext(PostContext)
-    
    const [answers, setAnswers] = useState([]);
 
-   const fetchAnswers = async (postId) =>{
-
-      const filteredPosts = posts.filter(post => post.id.toString() === postId);
-
-      const answers = filteredPosts.map(post => post.answers);
-      setAnswers(answers);
-
-   }
-
+   const fetchAnswers = () => {
+      fetch(`http://localhost:5000/answers/`)
+         .then(response => response.json())
+         .then(data => setAnswers(data))
+         .catch(error => console.log(error));
+   };
+   
+   useEffect(() => {
+      fetchAnswers();
+   }, []);
    return (
-      <AnswerContext.Provider
-       value={{
-        answers,
-        setAnswers,
-        fetchAnswers
-       }}
-    >
-        {children}
-      </AnswerContext.Provider>
+         <AnswerContext.Provider 
+            value={{
+               answers,
+               setAnswers,
+               fetchAnswers
+               }}
+            >
+         {children}
+         </AnswerContext.Provider>
    );
 };
 

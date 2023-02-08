@@ -25,6 +25,7 @@ const ShowPost = () => {
          
       }
          <Answers postId={id} />
+         
       </>
     );
 }

@@ -2,40 +2,39 @@ import React, { useContext, useEffect } from 'react';
 import AnswerContext from '../../contexts/AnswerContext';
 import UserContext from '../../contexts/UserContext';
 
-const Answers = ({ postId }) => {
 
+const Answers = ({ postId }) => {
    const { answers, fetchAnswers } = useContext(AnswerContext);
    const { users } = useContext(UserContext);
    
-   useEffect(()=>{
+   useEffect(() => {
       fetchAnswers(postId);
    }, [])
 
    return (
       <div>
-         {answers && answers.length !== 0 && answers.map(answerObject => (
+       {answers.map(answer => {
+         if(answer.postId.toString() !== postId) return;
 
-            answerObject.map(answer =>
-               <div key={answer.questionId}>
+         return answers && (
+            <div key={answer.answerId}>
                {answer.questionId && users && (
                   <>
-                     {users.find(user => user.id === answer.userId) && (
-                        <>
-                           <img alt="user avatar"
-                            style={{width:'30px', height:'30px'}} 
-                            src={users.find(user => user.id === answer.userId).avatar} />
-                           <span>{users.find(user => user.id === answer.userId).username}</span>
-                        </>
-                     )}
+                  <img alt="user avatar"
+                     style={{width:'30px', height:'30px'}} 
+                     src={users.find(user => user.id === answer.userId).avatar} />
+                  <span>{users.find(user => user.id === answer.userId).username}</span>
                   </>
                )}
                <p>{answer.comment}</p>
-               </div>
-            )
-            
-         ))}
-      </div>
+            </div>
+         );
+      })}  
+   </div>
    );
 };
 
 export default Answers;
+
+
+
