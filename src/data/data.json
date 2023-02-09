@@ -54,25 +54,11 @@
   ],
   "answers": [
     {
-      "postId": 1675772380731,
-      "questionId": 1675772380735,
-      "userId": 1675751237628,
-      "answerId": 1,
-      "comment": "geras atsakymas"
-    },
-    {
-      "postId": 1675772380731,
-      "questionId": 1675772380739,
-      "userId": 1675751237628,
-      "answerId": 2,
-      "comment": "geras atfsfsakymas"
-    },
-    {
-      "postId": 1675776448952,
-      "questionId": 167577238056,
-      "userId": 1675751237628,
-      "answerId": 3,
-      "comment": "aaaaaaaaaaa"
+      "id": "Iv6fNqsgZZr1yMCE0XSUj",
+      "postId": "1675772380731",
+      "userId": 0,
+      "comment": "sdfsd",
+      "timeStamp": "2023-02-09 08:27:56"
     }
   ]
 }

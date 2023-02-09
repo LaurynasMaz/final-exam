@@ -12,6 +12,16 @@ const AnswerProvider = ({ children  }) => {
          .then(data => setAnswers(data))
          .catch(error => console.log(error));
    };
+   const addNewComment = async (newComment) => {
+      console.log(newComment)
+      await fetch('http://localhost:5000/answers', {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify(newComment),
+      });
+
+      setAnswers([...answers, newComment]);
+   };
    
    useEffect(() => {
       fetchAnswers();
@@ -21,7 +31,8 @@ const AnswerProvider = ({ children  }) => {
             value={{
                answers,
                setAnswers,
-               fetchAnswers
+               fetchAnswers,
+               addNewComment
                }}
             >
          {children}
