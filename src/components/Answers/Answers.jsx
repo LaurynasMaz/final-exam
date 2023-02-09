@@ -3,10 +3,9 @@ import AnswerContext from '../../contexts/AnswerContext';
 import UserContext from '../../contexts/UserContext';
 import EditAnswer from './EditAnswer';
 import { nanoid } from 'nanoid';
-import { update } from 'lodash';
 
 const Answers = ({ postId }) => {
-   const { answers, fetchAnswers, addNewComment } = useContext(AnswerContext);
+   const { answers, fetchAnswers, addNewComment, deleteAnswer } = useContext(AnswerContext);
    const { users, loggedInUser } = useContext(UserContext);
    const [formInputs, setFormInputs] = useState({
       comment:''
@@ -53,7 +52,11 @@ const Answers = ({ postId }) => {
                      <br />
                      <small>{answer.updatedTimestamp}</small>
                      {loggedInUser && loggedInUser.id === answer.userId && (
-                        <EditAnswer answerId={answer.id} />
+                        <>
+                           <EditAnswer answerId={answer.id} />
+                           <button onClick={() => deleteAnswer(answer.id)}>Delete</button>
+                           {console.log(deleteAnswer)}
+                        </>
                      )}
                   </div>
                );

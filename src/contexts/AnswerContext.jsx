@@ -12,6 +12,9 @@ const AnswerProvider = ({ children  }) => {
          .then(data => setAnswers(data))
          .catch(error => console.log(error));
    };
+   useEffect(() => {
+      fetchAnswers();
+   }, []);
    const addNewComment = async (newComment) => {
       await fetch('http://localhost:5000/answers', {
          method: 'POST',
@@ -40,10 +43,13 @@ const AnswerProvider = ({ children  }) => {
    const getCurrentAnswerObject = (id) => {
       return answers.find(answer => answer.id === id);
    }
-   
-   useEffect(() => {
-      fetchAnswers();
-   }, []);
+   const deleteAnswer = async (id) => {
+      await fetch(`http://localhost:5000/answers/${id}`, {
+         method: 'DELETE',
+      });
+      setAnswers(answers.filter(answer => answer.id !== id));
+   };
+  
    return (
          <AnswerContext.Provider 
             value={{
@@ -52,6 +58,7 @@ const AnswerProvider = ({ children  }) => {
                fetchAnswers,
                addNewComment, 
                updateAnswer,
+               deleteAnswer
                }}
             >
          {children}
