@@ -44,6 +44,31 @@ const PostProvider = ({ children }) => {
       });
       setPosts(posts.filter(post => post.id !== id));
    };
+   const likePost = async (id, userId) => {
+      const post = getCurrentPostObject(id);
+      if (!post.likes.includes(userId)) {
+        post.likes.push(userId);
+        await fetch(`http://localhost:5000/posts/${id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(post)
+        });
+        setPosts(posts.map(post => post.id === id ? post : post));
+      }
+    };
+    const unlikePost = async (id, userId) => {
+      const post = getCurrentPostObject(id);
+      const index = post.likes.indexOf(userId);
+      if (index !== -1) {
+        post.likes.splice(index, 1);
+        await fetch(`http://localhost:5000/posts/${id}`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(post)
+        });
+        setPosts(posts.map(post => post.id === id ? post : post));
+      }
+    };
 
    return (
       <PostContext.Provider
@@ -51,7 +76,9 @@ const PostProvider = ({ children }) => {
             posts,
             addNewPost,
             updatePost,
-            deletePost
+            deletePost,
+            likePost,
+            unlikePost
          }}
       >
          {children}

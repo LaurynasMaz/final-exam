@@ -34,7 +34,8 @@
       "title": "dfgdfgfdgddsfds",
       "question": "fgfdgfdddfghdd",
       "timeStamp": "2023-02-07 14:19:40",
-      "lastEditTimestamp": "2023-02-07 15:26:41"
+      "lastEditTimestamp": "2023-02-07 15:26:41",
+      "likes": []
     },
     {
       "id": 1675776448952,
@@ -42,14 +43,32 @@
       "title": "sdfsdfsdfsdsdfsd",
       "question": "fsdfsdfdsfsd",
       "timeStamp": "2023-02-07 15:27:28",
-      "lastEditTimestamp": "2023-02-07 15:27:35"
+      "lastEditTimestamp": "2023-02-07 15:27:35",
+      "likes": [
+        1675684712279
+      ]
     },
     {
       "id": 1675861504576,
       "userId": 0,
       "title": "fdsdsf",
       "question": "sdffsdfs",
-      "timeStamp": "2023-02-08 15:05:04"
+      "timeStamp": "2023-02-08 15:05:04",
+      "likes": [
+        1675684712279,
+        0
+      ]
+    },
+    {
+      "id": 1675931893005,
+      "userId": 0,
+      "title": "dssa",
+      "question": "adsas",
+      "timeStamp": "2023-02-09 10:38:13",
+      "likes": [
+        1675684712279,
+        0
+      ]
     }
   ],
   "answers": [
@@ -72,7 +91,8 @@
       "postId": "1675776448952",
       "userId": 0,
       "comment": "f",
-      "timeStamp": "2023-02-09 09:34:21"
+      "timeStamp": "2023-02-09 09:34:21",
+      "updatedTimestamp": "2023-02-09 12:22:20"
     },
     {
       "id": "Ge9eY-8EXJOq5OydupnoJ",

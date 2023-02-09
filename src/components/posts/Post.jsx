@@ -8,7 +8,7 @@ import { Link, useNavigate } from "react-router-dom";
 const Post = ({data}) => {
 
    const { users, loggedInUser } = useContext(UserContext);
-   const { deletePost } = useContext(PostContext)
+   const { deletePost, likePost, unlikePost } = useContext(PostContext)
    const navigator = useNavigate()
 
    const postOwner = users.find(user => user.id === data.userId);
@@ -51,6 +51,13 @@ const Post = ({data}) => {
                <button onClick={() => deletePost(data.id)}>Delete</button>
             </>
          }
+         {loggedInUser &&
+            <>
+               <button onClick={() => likePost(data.id, loggedInUser.id)}>Like</button>
+               <button onClick={() => unlikePost(data.id, loggedInUser.id)}>Unlike</button>
+            </>
+         }
+         <span>{data.likes.length} people liked this post</span>
          <hr />
       </div>
    );
