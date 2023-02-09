@@ -1,7 +1,9 @@
 import React, { useContext, useState , useEffect} from 'react';
 import AnswerContext from '../../contexts/AnswerContext';
 import UserContext from '../../contexts/UserContext';
+import EditAnswer from './EditAnswer';
 import { nanoid } from 'nanoid';
+import { update } from 'lodash';
 
 const Answers = ({ postId }) => {
    const { answers, fetchAnswers, addNewComment } = useContext(AnswerContext);
@@ -47,6 +49,12 @@ const Answers = ({ postId }) => {
                         </>
                      )}
                      <p>{answer.comment}</p>
+                     <small>{answer.timeStamp}</small>
+                     <br />
+                     <small>{answer.updatedTimestamp}</small>
+                     {loggedInUser && loggedInUser.id === answer.userId && (
+                        <EditAnswer answerId={answer.id} />
+                     )}
                   </div>
                );
             })}  

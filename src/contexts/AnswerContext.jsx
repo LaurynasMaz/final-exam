@@ -13,7 +13,6 @@ const AnswerProvider = ({ children  }) => {
          .catch(error => console.log(error));
    };
    const addNewComment = async (newComment) => {
-      console.log(newComment)
       await fetch('http://localhost:5000/answers', {
          method: 'POST',
          headers: { 'Content-Type': 'application/json' },
@@ -22,6 +21,25 @@ const AnswerProvider = ({ children  }) => {
 
       setAnswers([...answers, newComment]);
    };
+   const updateAnswer = async (id, updatedAnswer) => {
+
+      let answerObject =  getCurrentAnswerObject(id);
+      answerObject = {...answerObject, ...updatedAnswer};
+
+      answerObject.updatedTimestamp = new Date().toLocaleString('LT')
+
+      await fetch(`http://localhost:5000/answers/${id}`, {
+         method: 'PUT',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify(answerObject)
+      });
+
+      setAnswers(answers.map(answer => answer.id === id ? answerObject : answer));
+   };
+
+   const getCurrentAnswerObject = (id) => {
+      return answers.find(answer => answer.id === id);
+   }
    
    useEffect(() => {
       fetchAnswers();
@@ -32,7 +50,8 @@ const AnswerProvider = ({ children  }) => {
                answers,
                setAnswers,
                fetchAnswers,
-               addNewComment
+               addNewComment, 
+               updateAnswer,
                }}
             >
          {children}
