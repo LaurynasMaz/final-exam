@@ -55,7 +55,6 @@ const Answers = ({ postId }) => {
                         <>
                            <EditAnswer answerId={answer.id} />
                            <button onClick={() => deleteAnswer(answer.id)}>Delete</button>
-                           {console.log(deleteAnswer)}
                         </>
                      )}
                   </div>
