@@ -22,7 +22,8 @@ const NewPost= () => {
          userId: loggedInUser.id,
          title: formInputs.title,
          question: formInputs.question,
-         timeStamp: new Date().toLocaleString('LT')
+         timeStamp: new Date().toLocaleString('LT'),
+         likes: []
       };
 
       addNewPost(newPost);
