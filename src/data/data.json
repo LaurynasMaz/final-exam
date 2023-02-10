@@ -47,8 +47,7 @@
       "timeStamp": "2023-02-07 15:27:28",
       "lastEditTimestamp": "2023-02-07 15:27:35",
       "likes": [
-        1675684712279,
-        0
+        1675684712279
       ]
     },
     {
@@ -57,7 +56,9 @@
       "title": "fdsfs",
       "question": "sdfds",
       "timeStamp": "2023-02-09 13:19:21",
-      "likes": []
+      "likes": [
+        0
+      ]
     }
   ],
   "answers": [
