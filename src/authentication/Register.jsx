@@ -4,6 +4,7 @@ import UserContext from "../contexts/UserContext"
 import { useState, useContext } from "react";
 import { useNavigate} from "react-router-dom";
 import Header from '../components/Header';
+import { nanoid } from 'nanoid';
 
 const Register = () => {
 
@@ -43,7 +44,7 @@ const Register = () => {
          setInvalidUsername(true);
       } else {
          let newUser = {
-            id: Date.now(),
+            id: nanoid(),
             username,
             email,
             password,

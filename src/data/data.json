@@ -1,83 +1,32 @@
 {
   "users": [
     {
-      "id": 0,
+      "id": "6-QyH_7PgXzBrWQgFEuhp",
       "username": "laurynas",
-      "password": "laurynas",
-      "avatar": "https://cdn.pixabay.com/photo/2020/07/14/13/07/icon-5404125_1280.png"
-    },
-    {
-      "username": "Test!12345",
-      "password": "Test!12345",
-      "avatar": "https://images.secretlab.co/theme/common/collab_pokemon_catalog_charizard-min.png",
-      "id": 1675684712279
-    },
-    {
-      "username": "Laurynas15!@gmail.com",
-      "email": "Laurynas15!@gmail.com",
-      "password": "Laurynas15!@gmail.com",
-      "avatar": "https://images.secretlab.co/theme/common/collab_pokemon_catalog_charizard-min.png",
-      "id": 1675688816356
-    },
-    {
-      "id": 1675751237628,
-      "username": "Laurynas15!@ggmail.com",
-      "email": "Laurynas15!@ggmail.com",
-      "password": "Laurynas15!@ggmail.com",
+      "email": "laurynas@gmail.com",
+      "password": "1231A!11",
       "avatar": "https://images.secretlab.co/theme/common/collab_pokemon_catalog_charizard-min.png"
     }
   ],
   "posts": [
     {
-      "id": 1675772380731,
-      "userId": 1675751237628,
-      "title": "dfgdfgfdgddsfds",
-      "question": "fgfdgfdddfghdd",
-      "timeStamp": "2023-02-07 14:19:40",
-      "lastEditTimestamp": "2023-02-07 15:26:41",
-      "likes": [
-        0
-      ]
-    },
-    {
-      "id": 1675776448952,
-      "userId": 1675751237628,
-      "title": "sdfsdfsdfsdsdfsd",
-      "question": "fsdfsdfdsfsd",
-      "timeStamp": "2023-02-07 15:27:28",
-      "lastEditTimestamp": "2023-02-07 15:27:35",
-      "likes": [
-        1675684712279,
-        0
-      ]
-    },
-    {
-      "id": 1675941561086,
-      "userId": 0,
-      "title": "fdsfs",
-      "question": "sdfds",
-      "timeStamp": "2023-02-09 13:19:21",
-      "likes": [
-        0
-      ]
+      "id": "MKLLcLdUbOkXmQQqReOTT",
+      "userId": "6-QyH_7PgXzBrWQgFEuhp",
+      "title": "tt",
+      "question": "tt",
+      "timeStamp": "2023-02-10 08:13:36",
+      "likes": [],
+      "lastEditTimestamp": "2023-02-10 08:13:41"
     }
   ],
   "answers": [
     {
-      "id": "zgWWLhKr6DKYb-zjdOBdL",
-      "postId": "1675776448952",
-      "userId": 0,
-      "comment": "f",
-      "timeStamp": "2023-02-09 09:34:21",
-      "updatedTimestamp": "2023-02-09 12:22:20"
-    },
-    {
-      "id": "Ge9eY-8EXJOq5OydupnoJ",
-      "postId": "1675772380731",
-      "userId": 1675684712279,
-      "comment": "fdfds",
-      "timeStamp": "2023-02-09 10:13:16",
-      "updatedTimestamp": "2023-02-09 10:13:20"
+      "id": "MwoYBbpLNaqySyCbfXsPo",
+      "postId": "MKLLcLdUbOkXmQQqReOTT",
+      "userId": "6-QyH_7PgXzBrWQgFEuhp",
+      "comment": "t",
+      "timeStamp": "2023-02-10 08:13:44",
+      "updatedTimestamp": "2023-02-10 08:14:18"
     }
   ]
 }
