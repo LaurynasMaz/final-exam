@@ -3,6 +3,7 @@ import AnswerContext from '../../contexts/AnswerContext';
 import UserContext from '../../contexts/UserContext';
 import EditAnswer from './EditAnswer';
 import { nanoid } from 'nanoid';
+import '../../styles/answer.css'
 
 const Answers = ({ postId }) => {
    const { answers, fetchAnswers, addNewComment, deleteAnswer } = useContext(AnswerContext);
@@ -22,23 +23,25 @@ const Answers = ({ postId }) => {
          postId,
          userId: loggedInUser.id,
          comment: formInputs.comment,
-         timeStamp: new Date().toLocaleString('LT')
+         timeStamp: new Date().toLocaleString('LT'),
       };
       addNewComment(newComment);
    };
    return (
-      <div>
+      <div className='answers'>
+         <div className='answerTextArea'>
          {loggedInUser && (
             <form onSubmit={handleSubmit}>
                <textarea type="text" value={formInputs.comment} onChange={(e) => setFormInputs({ ...formInputs, comment: e.target.value })} />
                <button type="submit">Submit</button>
             </form>
          )}
+         </div>
          {answers.map(answer => {
             if (answer.postId.toString() !== postId) return;
 
             return answer && (
-               <div key={answer.answerId}>
+               <div key={answer.answerId} >
                   {answer.id && users && (
                      <>
                         <img alt="user avatar"

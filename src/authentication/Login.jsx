@@ -29,7 +29,7 @@ const Login = () => {
 
    return (
       <>
-         <div className='form-container' >
+         <main  className='form-container' >
             <form onSubmit={handleSubmit}>
                <label>
                   UserName:
@@ -52,7 +52,7 @@ const Login = () => {
                   failedLogIn && <span>Wrong log in info</span>
                }
             </form>
-         </div>
+         </main >
       </>
    );
 }

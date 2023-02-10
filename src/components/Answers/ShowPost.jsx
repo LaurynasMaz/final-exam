@@ -3,6 +3,7 @@ import PostContext from "../../contexts/PostContext";
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router";
 import Answers from "./Answers";
+import '../../styles/answer.css'
 
 const ShowPost = () => {
    const { posts } = useContext(PostContext)
@@ -19,14 +20,14 @@ const ShowPost = () => {
    }, [])
 
    return (
-      <>
+      <main  className="postAndAnswers">
          {postData &&
             <Post data={postData} />
 
          }
          <Answers postId={id} />
 
-      </>
+      </main >
    );
 }
 

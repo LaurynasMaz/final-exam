@@ -31,7 +31,7 @@ const EditPost = () => {
    }
 
    return (
-      <div className='form-container'>
+      <main className='form-container'>
 
          <form onSubmit={handleSubmit}>
             <label>
@@ -53,7 +53,7 @@ const EditPost = () => {
             </div>
             
          </form>
-      </div>
+      </main>
    );
 }
  

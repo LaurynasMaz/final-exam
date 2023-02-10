@@ -33,7 +33,7 @@ const NewPost= () => {
    }
 
    return (
-      <div  >
+      <main>
          <form onSubmit={handleSubmit} className='form-container'>
             <label>
                Title:
@@ -53,7 +53,7 @@ const NewPost= () => {
                <button type="submit">Add new Post</button>
             </div>
          </form>
-      </div>
+      </main >
    );
 }
  

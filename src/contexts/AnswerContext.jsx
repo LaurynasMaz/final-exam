@@ -49,6 +49,7 @@ const AnswerProvider = ({ children }) => {
       });
       setAnswers(answers.filter(answer => answer.id !== id));
    };
+   
 
    return (
       <AnswerContext.Provider

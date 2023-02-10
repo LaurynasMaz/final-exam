@@ -58,7 +58,7 @@ const Register = () => {
       
 
    return (
-      <>
+      <main>
        <Formik
          initialValues={formInputs}
          validationSchema={validationSchema}
@@ -142,7 +142,7 @@ const Register = () => {
          {
             invalidusername && <span>User with such name already exists.</span>
          }
-      </>
+      </main >
    );
 }
 
