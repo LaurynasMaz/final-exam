@@ -10,6 +10,7 @@ const Header = () => {
 
    return (
       <>
+      <header>
          {
             loggedInUser
                ?
@@ -25,6 +26,7 @@ const Header = () => {
                   <Link to='/register'>Register</Link>
                </div>
          }
+         </header>
          <Outlet />
       </>
    );

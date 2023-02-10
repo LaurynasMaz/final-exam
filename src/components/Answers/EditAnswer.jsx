@@ -22,7 +22,6 @@ const EditAnswer = ({ answerId }) => {
             comment: formInputs.comment,
             updatedTimestamp
          });
-      await updateAnswer(answerId);
       setShowTextArea(false);
    };
 
