@@ -23,6 +23,7 @@ const EditAnswer = ({ answerId }) => {
             updatedTimestamp
          });
       setShowTextArea(false);
+      setFormInputs("")
    };
 
    return (
@@ -35,7 +36,7 @@ const EditAnswer = ({ answerId }) => {
                   value={formInputs.comment}
                   onChange={e => setFormInputs({ ...formInputs, comment: e.target.value })}
                />
-               <button type="submit">Submit</button>
+               <button type="submit">Save</button>
             </form>
          )}
       </>

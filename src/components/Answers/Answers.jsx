@@ -26,38 +26,42 @@ const Answers = ({ postId }) => {
          timeStamp: new Date().toLocaleString('LT'),
       };
       addNewComment(newComment);
+      setFormInputs({ comment: '' });
    };
    return (
       <div className='answers'>
-         <div className='answerTextArea'>
+
          {loggedInUser && (
-            <form onSubmit={handleSubmit}>
+            <form className='answerTextArea' onSubmit={handleSubmit}>
                <textarea type="text" value={formInputs.comment} onChange={(e) => setFormInputs({ ...formInputs, comment: e.target.value })} />
                <button type="submit">Submit</button>
             </form>
          )}
-         </div>
+
          {answers.map(answer => {
             if (answer.postId.toString() !== postId) return;
 
             return answer && (
-               <div key={answer.answerId} >
+               <div key={answer.answerId} className='answer' >
                   {answer.id && users && (
-                     <>
+                     <div className='user'>
                         <img alt="user avatar"
                            style={{ width: '30px', height: '30px' }}
                            src={users.find(user => user.id === answer.userId).avatar} />
                         <span>{users.find(user => user.id === answer.userId).username}</span>
-                     </>
+                     </div>
                   )}
                   <p>{answer.comment}</p>
-                  <small>{answer.timeStamp}</small>
-                  <br />
-                  <small>{answer.updatedTimestamp}</small>
+                  <div className='time'>
+                     <small>{answer.timeStamp}</small>
+                     <small>Edited: {answer.updatedTimestamp}</small>
+                  </div>
                   {loggedInUser && loggedInUser.id === answer.userId && (
                      <>
-                        <EditAnswer answerId={answer.id} />
-                        <button onClick={() => deleteAnswer(answer.id)}>Delete</button>
+                        <div className='button'>
+                           <EditAnswer answerId={answer.id} />
+                           <button onClick={() => deleteAnswer(answer.id)}>Delete</button>
+                        </div>
                      </>
                   )}
                </div>
