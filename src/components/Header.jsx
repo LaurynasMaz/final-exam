@@ -11,14 +11,14 @@ const Header = () => {
    return (
       <>
          {
-            loggedInUser 
-            ? 
+            loggedInUser
+               ?
                <>
-               <UserInfo /> 
-               <Link to='/'>Home</Link>
-               <Link to='newPost'>New Post</Link>
+                  <UserInfo />
+                  <Link to='/'>Home</Link>
+                  <Link to='newPost'>New Post</Link>
                </>
-            :
+               :
                <div className="loginRegister">
                   <Link to='/'>Home</Link>
                   <Link to='/login'>Login</Link>
@@ -29,5 +29,5 @@ const Header = () => {
       </>
    );
 }
- 
+
 export default Header;

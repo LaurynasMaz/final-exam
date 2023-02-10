@@ -9,25 +9,25 @@ const ShowPost = () => {
    const [postData, setPostData] = useState(null)
    const { id } = useParams();
 
-   const getPostData = () =>{
+   const getPostData = () => {
       const postData = posts.find(post => post.id.toString() === id);
       setPostData(postData)
    }
 
-   useEffect(()=>{
+   useEffect(() => {
       getPostData();
    }, [])
 
-   return ( 
+   return (
       <>
-      {postData &&
-         <Post data={postData} />
-         
-      }
+         {postData &&
+            <Post data={postData} />
+
+         }
          <Answers postId={id} />
-         
+
       </>
-    );
+   );
 }
- 
+
 export default ShowPost;

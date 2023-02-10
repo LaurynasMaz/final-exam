@@ -18,10 +18,12 @@ const EditAnswer = ({ answerId }) => {
          return;
       }
       await updateAnswer(answerId,
-          { comment: formInputs.comment ,
-            updatedTimestamp});
+         {
+            comment: formInputs.comment,
+            updatedTimestamp
+         });
       await updateAnswer(answerId);
-         setShowTextArea(false);
+      setShowTextArea(false);
    };
 
    return (

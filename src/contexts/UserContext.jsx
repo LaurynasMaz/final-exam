@@ -7,7 +7,7 @@ const UserProvider = ({ children }) => {
    const [loggedInUser, setLoggedInUser] = useState();
    const [users, setUsers] = useState([])
 
-   const getUsers = async () =>{
+   const getUsers = async () => {
       const allUsers = await fetch('http://localhost:5000/users')
          .then(response => response.json());
       setUsers(allUsers);
@@ -19,13 +19,13 @@ const UserProvider = ({ children }) => {
    }, []);
 
    const addNewUser = async (newUser) => {
-         const response = await fetch('http://localhost:5000/users', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(newUser),
-         });
-         const data = await response.json();
-         setUsers([...users, data]);
+      const response = await fetch('http://localhost:5000/users', {
+         method: 'POST',
+         headers: { 'Content-Type': 'application/json' },
+         body: JSON.stringify(newUser),
+      });
+      const data = await response.json();
+      setUsers([...users, data]);
    };
 
    return (

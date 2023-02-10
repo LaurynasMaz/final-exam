@@ -2,7 +2,7 @@ import React, { createContext, useState, useEffect } from "react";
 
 const AnswerContext = createContext();
 
-const AnswerProvider = ({ children  }) => {
+const AnswerProvider = ({ children }) => {
 
    const [answers, setAnswers] = useState([]);
 
@@ -26,8 +26,8 @@ const AnswerProvider = ({ children  }) => {
    };
    const updateAnswer = async (id, updatedAnswer) => {
 
-      let answerObject =  getCurrentAnswerObject(id);
-      answerObject = {...answerObject, ...updatedAnswer};
+      let answerObject = getCurrentAnswerObject(id);
+      answerObject = { ...answerObject, ...updatedAnswer };
 
       answerObject.updatedTimestamp = new Date().toLocaleString('LT')
 
@@ -49,20 +49,20 @@ const AnswerProvider = ({ children  }) => {
       });
       setAnswers(answers.filter(answer => answer.id !== id));
    };
-  
+
    return (
-         <AnswerContext.Provider 
-            value={{
-               answers,
-               setAnswers,
-               fetchAnswers,
-               addNewComment, 
-               updateAnswer,
-               deleteAnswer
-               }}
-            >
+      <AnswerContext.Provider
+         value={{
+            answers,
+            setAnswers,
+            fetchAnswers,
+            addNewComment,
+            updateAnswer,
+            deleteAnswer
+         }}
+      >
          {children}
-         </AnswerContext.Provider>
+      </AnswerContext.Provider>
    );
 };
 

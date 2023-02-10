@@ -7,6 +7,7 @@ import Home from './components/Home';
 import NewPost from './components/posts/NewPost';
 import EditPost from './components/posts/EditPost';
 import ShowPost from './components/Answers/ShowPost';
+import Footer from './components/Footer';
 
 const App = () => {
    return (
@@ -22,6 +23,7 @@ const App = () => {
                <Route path='/showPost/:id' element={<ShowPost />}/>
             </Route>
          </Routes>
+         <Footer />
       </div>
    </>
    );
