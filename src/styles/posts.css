@@ -1,0 +1,14 @@
+.allPosts{
+   display: flex;
+   flex-direction: column;
+   gap: 30px
+}
+.allPosts select{
+   width: 20%;
+   background-color: #3a3a3a;
+   color: white;
+   padding: 0.5em 1em;
+   margin-top: 1em;
+   border: 1px solid white;
+   border-radius: 4px;
+}
