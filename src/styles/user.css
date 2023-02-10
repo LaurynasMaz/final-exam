@@ -1,0 +1,20 @@
+.userText img {
+   width: 30px;
+   height: 30px;
+}
+.userText {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+.userText button{
+   background-color: #3a3a3a;
+   color: white;
+   border: 1px solid white;
+   border-radius: 5px;
+   padding: 2px;
+}
+.userText button:hover{
+   color: blue;
+   border: 1px solid blue;
+}
