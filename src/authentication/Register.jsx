@@ -3,7 +3,6 @@ import { Formik, Form, Field } from 'formik';
 import UserContext from "../contexts/UserContext"
 import { useState, useContext } from "react";
 import { useNavigate} from "react-router-dom";
-import Header from '../components/Header';
 import { nanoid } from 'nanoid';
 
 const Register = () => {
@@ -60,7 +59,6 @@ const Register = () => {
 
    return (
       <>
-      <Header />
        <Formik
          initialValues={formInputs}
          validationSchema={validationSchema}

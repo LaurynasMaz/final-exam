@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
 
    const [formInputs, setFormInputs] = useState({
-      username : '',
-      password : ''
+      username: '',
+      password: ''
    });
    const [failedLogIn, setFailedLogIn] = useState(false);
    const { users, setLoggedInUser } = useContext(UserContext);
@@ -25,34 +25,36 @@ const Login = () => {
 
       setLoggedInUser(loggedInUser);
       navigate('/');
-   } 
+   }
 
    return (
-   <>
-      <div>
-         <form onSubmit={handleSubmit}>
-            <label>
-            UserName:
-            <input type="text" name="userName"
-            value={formInputs.userName}
-            onChange={(e)=>setFormInputs({...formInputs, username:e.target.value})}
-            />
-            </label>
-            <label>
-            Password:
-            <input type="password" name="password"
-            value={formInputs.password}
-            onChange={(e)=>setFormInputs({...formInputs, password:e.target.value})}
-            />
-            </label>
-            <input type="submit" value="Log In" />
-            {
-            failedLogIn && <span>Wrong log in info</span>
-            }
-         </form>
-      </div>
-   </>
-); 
+      <>
+         <div className='form-container' >
+            <form onSubmit={handleSubmit}>
+               <label>
+                  UserName:
+                  <input type="text" name="userName"
+                     value={formInputs.userName}
+                     onChange={(e) => setFormInputs({ ...formInputs, username: e.target.value })}
+                  />
+               </label>
+               <label>
+                  Password:
+                  <input type="password" name="password"
+                     value={formInputs.password}
+                     onChange={(e) => setFormInputs({ ...formInputs, password: e.target.value })}
+                  />
+               </label>
+               <div className="buttonClass">
+                  <button type="submit">Login</button>
+               </div>
+               {
+                  failedLogIn && <span>Wrong log in info</span>
+               }
+            </form>
+         </div>
+      </>
+   );
 }
 
 export default Login;

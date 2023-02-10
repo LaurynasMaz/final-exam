@@ -1,4 +1,5 @@
 import './App.css';
+import './styles/form.css'
 import { Routes, Route } from 'react-router-dom';
 import Login from './authentication/Login';
 import Register from './authentication/Register'

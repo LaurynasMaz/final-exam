@@ -33,8 +33,8 @@ const NewPost= () => {
    }
 
    return (
-      <div className='form-container'>
-         <form onSubmit={handleSubmit}>
+      <div  >
+         <form onSubmit={handleSubmit} className='form-container'>
             <label>
                Title:
                <input type="text" name="title"
