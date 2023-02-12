@@ -3,7 +3,7 @@ import { Formik, Form, Field } from 'formik';
 import UserContext from "../contexts/UserContext"
 import { useState, useContext } from "react";
 import { useNavigate} from "react-router-dom";
-import Header from '../components/Header';
+import { nanoid } from 'nanoid';
 
 const Register = () => {
 
@@ -25,8 +25,10 @@ const Register = () => {
          .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$-/:-?{-~!"^_`[\]])(?=.{8,})/,
          'Password must contain 8 letters, atleast one capitalize letter, number, simbol')
          .required('This field must be filled.'),
-      passwordRepeat: Yup.mixed()
-         .oneOf([Yup.ref('password'), null], 'Passwords must match.')
+      passwordRepeat:Yup.string()
+         .oneOf([Yup.ref('password'), null], 'Passwords must match')
+         .required('This field must be filled.'),
+      avatar : Yup.string()   
          .required('This field must be filled.'),
    });
 
@@ -43,7 +45,7 @@ const Register = () => {
          setInvalidUsername(true);
       } else {
          let newUser = {
-            id: Date.now(),
+            id: nanoid(),
             username,
             email,
             password,
@@ -58,8 +60,7 @@ const Register = () => {
       
 
    return (
-      <>
-      <Header />
+      <main>
        <Formik
          initialValues={formInputs}
          validationSchema={validationSchema}
@@ -126,12 +127,18 @@ const Register = () => {
                      <div>
                      <label>
                         User picture:
-                        <input type="url" name="avatar" values={values.avatar}
+                        <Field type="url" name="avatar" values={values.avatar}
                            onChange={(e) => setValues({...values, avatar:e.target.value})}
-                        />
+                           />
+                           {
+                              errors.avatar && touched.avatar?
+                                 <span>{errors.avatar}</span>
+                                 : null
+                           }
+                       
                      </label>
                      </div>
-                     <div>
+                     <div className='buttonClass'>
                         <button type="submit">Register</button>
                      </div>
                   </div>
@@ -143,7 +150,7 @@ const Register = () => {
          {
             invalidusername && <span>User with such name already exists.</span>
          }
-      </>
+      </main >
    );
 }
 

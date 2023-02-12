@@ -1,0 +1,61 @@
+.postCard img{
+   width: 30px;
+   height: 30px;
+}
+.postCard{
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   height: 300px;
+   width: 100%;
+   flex-direction: column;
+   padding: 15px;
+   border: 3px solid white;
+   border-radius: 10px;
+}
+.allInfo{
+   display: flex;
+   flex-direction: column;
+}
+.userInfo{
+   display: flex;
+   align-items: center;
+   gap: 15px;
+}
+.time{
+   display: flex;
+   flex-direction: column;
+}
+.likeUnlike{
+   display: flex;
+   gap: 5px;
+}
+.likeUnlike button{
+   background-color: #3a3a3a;
+   border: none;
+}
+.likeUnlike button svg{
+   fill: white;
+}
+.deleteEdit button{
+   background-color: #3a3a3a;
+   color: white;
+   padding: 0.5em 1em;
+   margin-top: 1em;
+   border: 1px solid white;
+   border-radius: 4px;
+}
+.deleteEdit button a{
+  text-decoration: none;
+  color: white;
+}
+.likeUnlike button svg:hover{
+   fill: blue;
+}
+.deleteEdit button:hover{
+   color: blue;
+   border: 1px solid blue;
+}
+.deleteEdit button a:hover{
+   color: blue;
+ }

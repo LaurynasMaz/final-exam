@@ -1,6 +1,7 @@
 import PostContext from "../../contexts/PostContext";
 import { useContext, useState } from "react";
 import Post from "./Post";
+import '../../styles/posts.css'
 
 const Posts = () => {
    const { posts } = useContext(PostContext);
@@ -15,7 +16,7 @@ const Posts = () => {
    });
 
    return (
-      <>
+      <div className="allPosts">
          <select value={sortBy} onChange={(e) => setSortBy(e.target.value)}>
             <option value="oldest">From Oldest to Newest</option>
             <option value="newest">From Newest to Oldest</option>
@@ -28,7 +29,7 @@ const Posts = () => {
                />  
             )
          }
-      </>
+      </div>
    );
 }
  

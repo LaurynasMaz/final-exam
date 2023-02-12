@@ -2,6 +2,7 @@ import PostContext from "../../contexts/PostContext";
 import UserContext from "../../contexts/UserContext";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { nanoid } from "nanoid";
 
 const NewPost= () => {
 
@@ -18,7 +19,7 @@ const NewPost= () => {
    const handleSubmit = e => {
       e.preventDefault();
       const newPost = {
-         id: Date.now(),
+         id: nanoid(),
          userId: loggedInUser.id,
          title: formInputs.title,
          question: formInputs.question,
@@ -32,8 +33,8 @@ const NewPost= () => {
    }
 
    return (
-      <div className='form-container'>
-         <form onSubmit={handleSubmit}>
+      <main>
+         <form onSubmit={handleSubmit} className='form-container'>
             <label>
                Title:
                <input type="text" name="title"
@@ -52,7 +53,7 @@ const NewPost= () => {
                <button type="submit">Add new Post</button>
             </div>
          </form>
-      </div>
+      </main >
    );
 }
  

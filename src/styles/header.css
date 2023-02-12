@@ -1,0 +1,22 @@
+header{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 15px;
+}
+.logo img {
+   width: 70px;
+   height: 70px;
+}
+.links{
+   display: flex;
+   gap: 15px;
+   align-items: center;
+}
+.links a{
+   text-decoration: none;
+   color: white;
+}
+.links a:hover{
+   color: blue;
+}

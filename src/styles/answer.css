@@ -1,0 +1,78 @@
+.postAndAnswers{
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+.answers{
+   display: flex;
+   flex-direction: column;
+   gap: 15px;
+}
+.answerTextArea{
+   display: grid;
+   grid-template: 1fr max-content / 1fr;
+   justify-items: center;
+}
+.answerTextArea textarea{
+   background-color: rgb(231, 229, 229);
+   width: 80%;
+   height: 6rem;
+   margin-bottom: 0.5em;
+   border-radius: 4px;
+}
+.answerTextArea button{
+   background-color: #3a3a3a;
+   color: white;
+   padding: 0.5em 1em;
+   margin-top: 0.5em;
+   border: 1px solid white;
+   border-radius: 4px;
+}
+.answerTextArea button:hover{
+   color: blue;
+   border: 1px solid blue;
+}
+.answer{
+   padding: 10px;
+   display: flex;
+   flex-direction: column;
+   height: 200px;
+   border: 1px solid white;
+   border-radius: 10px;
+   gap: 20px;
+}
+.user{
+   display: flex;
+   align-items: center;
+}
+.time{
+   display: flex;
+   flex-direction: row;
+   gap: 10px;
+}
+.button{
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   gap: 5px;
+}
+.button form{
+   display: flex;
+   align-items: center;
+   gap: 5px;
+}
+button form textarea{
+   width: 40%;
+}
+.button button{
+   background-color: #3a3a3a;
+   color: white;
+   padding: 0.5em 1em;
+   border: 1px solid white;
+   border-radius: 4px;
+}
+.button button:hover{
+   color: blue;
+   border: 1px solid blue;
+}
+
