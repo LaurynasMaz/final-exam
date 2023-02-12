@@ -11,7 +11,6 @@ const UserProvider = ({ children }) => {
       const allUsers = await fetch('http://localhost:5000/users')
          .then(response => response.json());
       setUsers(allUsers);
-      setLoggedInUser(allUsers[0]);
    }
 
    useEffect(() => {
