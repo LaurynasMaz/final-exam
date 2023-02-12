@@ -1,8 +1,7 @@
 footer{
-   padding-left: 15px;
-   padding-right: 15px;
-   padding-bottom: 15px;
+   padding: 15px;
    display: flex;
    align-items: center;
    justify-content: space-between;
+   border-top: 1px solid white;
 }
