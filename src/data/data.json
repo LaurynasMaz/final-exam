@@ -40,7 +40,8 @@
       "question": "kokis burgeris skaniausias jusu nuomuone ?",
       "timeStamp": "2023-02-12 16:30:38",
       "likes": [
-        "272DPByksDSrXcsESCaUp"
+        "272DPByksDSrXcsESCaUp",
+        "6-QyH_7PgXzBrWQgFEuhp"
       ]
     }
   ],
@@ -51,6 +52,13 @@
       "userId": "6-QyH_7PgXzBrWQgFEuhp",
       "comment": "As tai gerai ",
       "timeStamp": "2023-02-12 12:01:13"
+    },
+    {
+      "id": "3rL-3s5SQrArzeViEssUL",
+      "postId": "CZy6Ij5mxl-BZaDrXwZnR",
+      "userId": "6-QyH_7PgXzBrWQgFEuhp",
+      "comment": "Hesas visai gerai",
+      "timeStamp": "2023-02-12 18:38:06"
     }
   ]
 }

@@ -25,13 +25,13 @@ const Post = ({ data }) => {
          {postOwner && (
             <>
                <div className="allInfo">
-                  <div className="userInfo">
+                  <div className="userInfo" onClick={showPost}>
                      <img src={postOwner.avatar}
                         alt="user avatar"
                      />
                      <span>{postOwner.username}</span>
                   </div>
-                  <div className="time">
+                  <div className="time" onClick={showPost}>
                      <small>{data.timeStamp}</small>
                      {data.lastEditTimestamp && (
                         <>
@@ -45,6 +45,8 @@ const Post = ({ data }) => {
 
          <div className="content" onClick={showPost}>
             <h1>{data.title}</h1>
+         </div>
+         <div onClick={showPost}>
             <p>{data.question}</p>
          </div>
 
